@@ -42,6 +42,14 @@ AWS CodeBuild is a fully managed continuous integration (CI) service that compil
 - Allow CodeBuild to CodePipeline, etc.
 Create Build Project → Ready for integration with CodePipeline
 
+![](./architecture.png)
+
+![](./architecture.png)
+
+![](./architecture.png)
+
+![](./architecture.png)
+
 ### Adding Correct Requirements File Path in Buildspec
 - Make sure you provide the exact path to your requirements.txt inside the buildspec.yml.
 
@@ -59,12 +67,16 @@ Name the role: **`code-build-service-role`**
 4. Set the role name as: **`code-build-service-role`**
 5. Create the role and attach it to your CodeBuild project.
 
+![](./architecture.png)
+
 This role allows CodeBuild to CodePipeline, and other required services during the build process.
 
 ### AWS Systems Manager Parameter Store
 
 AWS Systems Manager (SSM) Parameter Store is a secure and scalable service used to store configuration data and secrets.  
 It helps you manage sensitive values (like passwords, tokens, and URLs) without hardcoding them in your code or build files.
+
+![](./architecture.png)
 
 ---
 
@@ -93,6 +105,10 @@ Create the following parameters:
 These parameters can now be safely accessed within your CodeBuild project or CodePipeline using the AWS SDK or environment variables.
 
 To create a build in AWS CodeBuild, navigate to your project in the AWS Console and click **Start Build**, or use the AWS CLI with `aws codebuild start-build --project-name my-codebuild-project`. Once the build starts, you can check its status in the **Build history** of the console or via CLI using `aws codebuild batch-get-builds --ids <build-id>`. Look for the `"buildStatus"` field—`SUCCEEDED` indicates the build completed successfully, while `FAILED`, `FAULT`, or `STOPPED` indicates an issue. 
+
+![](./architecture.png)
+
+![](./architecture.png)
 
 ## AWS CodePipeline 
 
@@ -128,10 +144,13 @@ AWS CodePipeline is a fully managed **continuous integration and continuous deli
    - Use the AWS Console to view **Pipeline Stages** and **Execution history**  
    - Each stage shows the status: **Succeeded**, **Failed**, or **In Progress**
   
+   ![](./architecture.png)
+  
 ### Verify Docker Image in Repository 🐳
 
 After the build and push process is complete, you can verify that the Docker image is correctly stored in your container repository. For Amazon ECR, go to the **ECR console**, select your repository, and check that the newly built image tag exists.
 
+![](./architecture.png)
 
 
 
