@@ -94,6 +94,40 @@ These parameters can now be safely accessed within your CodeBuild project or Cod
 
 To create a build in AWS CodeBuild, navigate to your project in the AWS Console and click **Start Build**, or use the AWS CLI with `aws codebuild start-build --project-name my-codebuild-project`. Once the build starts, you can check its status in the **Build history** of the console or via CLI using `aws codebuild batch-get-builds --ids <build-id>`. Look for the `"buildStatus"` field—`SUCCEEDED` indicates the build completed successfully, while `FAILED`, `FAULT`, or `STOPPED` indicates an issue. 
 
+## AWS CodePipeline 
+
+AWS CodePipeline is a fully managed **continuous integration and continuous delivery (CI/CD) service** that automates the build, test, and deployment phases of your application every time there is a code change. It allows developers to rapidly deliver features and updates in a consistent and reliable manner. CodePipeline integrates with AWS services like **CodeBuild**, **CodeDeploy**, as well as third-party tools such as GitHub, making it easy to automate end-to-end workflows while maintaining security and compliance.
+
+---
+
+## Steps to Create a CodePipeline
+
+1. **Open AWS CodePipeline**  
+   - Go to the AWS Management Console → **CodePipeline → Create pipeline**  
+
+2. **Pipeline Settings**  
+   - Enter a **Pipeline name**  
+   - Select a **Service Role** or create a new one for the pipeline  
+
+3. **Add Source Stage**  
+   - Choose your **source provider** (e.g., GitHub, CodeCommit)  
+   - Connect/authorize your repository  
+   - Select the branch to trigger the pipeline  
+
+4. **Add Build Stage**  
+   - Choose **AWS CodeBuild** as the build provider  
+   - Select your **CodeBuild project** (created earlier)  
+   - Ensure the **buildspec.yml** path is correct  
+
+5. **Review and Create**  
+   - Review the pipeline configuration  
+   - Click **Create pipeline**  
+   - The pipeline automatically triggers for the first time using the source code  
+
+6. **Monitor Pipeline**  
+   - Use the AWS Console to view **Pipeline Stages** and **Execution history**  
+   - Each stage shows the status: **Succeeded**, **Failed**, or **In Progress**
+
 
 
 
