@@ -145,16 +145,11 @@ AWS CodePipeline is a fully managed **continuous integration and continuous deli
    - Use the AWS Console to view **Pipeline Stages** and **Execution history**  
    - Each stage shows the status: **Succeeded**, **Failed**, or **In Progress**
   
- ![Alt text](https://github.com/Naveen15github/AWS-End-to-End-CI/blob/8d936afc9fa4cce5567043fdead80eb306962b37/Screenshot%20(158).png)
-  
+
+![Alt text](https://github.com/Naveen15github/AWS-End-to-End-CI/blob/8d936afc9fa4cce5567043fdead80eb306962b37/Screenshot%20(160).png)
+
 ### Verify Docker Image in Repository 🐳
 
 After the build and push process is complete, you can verify that the Docker image is correctly stored in your container repository. For Amazon ECR, go to the **ECR console**, select your repository, and check that the newly built image tag exists.
 
-![Alt text](https://github.com/Naveen15github/AWS-End-to-End-CI/blob/8d936afc9fa4cce5567043fdead80eb306962b37/Screenshot%20(160).png)
-
-
-
-
-
-
+ ![Alt text](https://github.com/Naveen15github/AWS-End-to-End-CI/blob/8d936afc9fa4cce5567043fdead80eb306962b37/Screenshot%20(158).png)
