@@ -1,4 +1,4 @@
-# AWS-End-to-End-CI
+# AWS-End-to-End-Continuous Integration
 ## 🌟 Introduction
 This project showcases a fully automated AWS Continuous Integration (CI) pipeline built using CodePipeline, CodeBuild, IAM, and Systems Manager (SSM). It delivers a clean, scalable, and secure workflow that builds, tests, and packages your application with zero manual effort.
 
