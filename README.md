@@ -1,4 +1,4 @@
-#AWS-End-to-End-CI
+# AWS-End-to-End-CI
 ## 🌟 Introduction
 This project showcases a fully automated AWS Continuous Integration (CI) pipeline built using CodePipeline, CodeBuild, IAM, and Systems Manager (SSM). It delivers a clean, scalable, and secure workflow that builds, tests, and packages your application with zero manual effort.
 
@@ -154,6 +154,6 @@ After the build and push process is complete, you can verify that the Docker ima
 
  ![Alt text](https://github.com/Naveen15github/AWS-End-to-End-CI/blob/8d936afc9fa4cce5567043fdead80eb306962b37/Screenshot%20(158).png)
 
- **Author:** Naveen G
-This repository was created by me.
+# **Author:** Naveen G
+- This repository was created by me.
 
